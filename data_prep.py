@@ -212,6 +212,5 @@ def save_master_breakdown_df():
         data_dict[year] = data_by_date_breakdown(year)
     master_breakdown = pd.DataFrame()
     for year in data_dict:
-        print(data_dict[year])
         master_breakdown = pd.concat([master_breakdown, data_dict[year]])
     master_breakdown.to_csv('data/master_breakdown.csv')
